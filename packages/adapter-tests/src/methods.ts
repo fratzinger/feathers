@@ -48,7 +48,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { name: 'Tester' }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -59,7 +59,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
         try {
           await service.get('568225fbfe21222432e836ff');
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Error is a NotFound Feathers error'
           );
@@ -77,7 +77,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { [idProp]: alice[idProp] }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -118,7 +118,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { name: 'Tester' }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -129,7 +129,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
         try {
           await service.remove(null);
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'MethodNotAllowed',
             'Removing multiple without option set throws MethodNotAllowed'
           );
@@ -227,7 +227,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { [idProp]: alice[idProp] }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -277,7 +277,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { name: 'Tester' }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -288,7 +288,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
         try {
           await service.update('568225fbfe21222432e836ff', { name: 'NotFound' });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Error is a NotFound Feathers error'
           );
@@ -304,7 +304,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             { query:  { name: 'NotDave' } }
           );
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Error is a NotFound Feathers error'
           );
@@ -326,7 +326,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { [idProp]: alice[idProp] }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -372,7 +372,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { name: 'Tester' }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -383,7 +383,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
         try {
           await service.patch(null, {});
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'MethodNotAllowed',
             'Removing multiple without option set throws MethodNotAllowed'
           );
@@ -538,7 +538,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
         try {
           await service.patch('568225fbfe21222432e836ff', { name: 'PatchDoug' });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Error is a NotFound Feathers error'
           );
@@ -554,7 +554,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             { query:  { name: 'NotDave' } }
           );
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Error is a NotFound Feathers error'
           );
@@ -575,7 +575,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
             query: { [idProp]: alice[idProp] }
           });
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'NotFound',
             'Got a NotFound Feathers error'
           );
@@ -624,7 +624,7 @@ export default (test: any, app: any, _errors: any, serviceName: string, idProp: 
         try {
           await service.create([], {});
           throw new Error('Should never get here');
-        } catch (error) {
+        } catch (error: any) {
           assert.strictEqual(error.name, 'MethodNotAllowed',
             'Removing multiple without option set throws MethodNotAllowed'
           );
