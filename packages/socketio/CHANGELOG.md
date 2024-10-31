@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.31](https://github.com/feathersjs/feathers/compare/v5.0.30...v5.0.31) (2024-10-31)
+
+### Bug Fixes
+
+- **dependencies:** Update all dependencies ([#3545](https://github.com/feathersjs/feathers/issues/3545)) ([221b92b](https://github.com/feathersjs/feathers/commit/221b92bb0ee5d54fb1036742968797cb02e56da2))
+
 ## [5.0.30](https://github.com/feathersjs/feathers/compare/v5.0.29...v5.0.30) (2024-09-02)
 
 **Note:** Version bump only for package @feathersjs/socketio

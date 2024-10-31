@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.31](https://github.com/feathersjs/feathers/compare/v5.0.30...v5.0.31) (2024-10-31)
+
+### Bug Fixes
+
+- **dependencies:** Update all dependencies ([#3545](https://github.com/feathersjs/feathers/issues/3545)) ([221b92b](https://github.com/feathersjs/feathers/commit/221b92bb0ee5d54fb1036742968797cb02e56da2))
+- **express:** Update express to version 4.21.1 ([#3543](https://github.com/feathersjs/feathers/issues/3543)) ([56d6151](https://github.com/feathersjs/feathers/commit/56d6151624f083d6604e76746cf555ed846b6d40))
+- **mongodb:** Fix mongo count ([#3541](https://github.com/feathersjs/feathers/issues/3541)) ([3e95c7d](https://github.com/feathersjs/feathers/commit/3e95c7df6ae7de6a3a406dfb61dd044ea905456f))
+
 ## [5.0.30](https://github.com/feathersjs/feathers/compare/v5.0.29...v5.0.30) (2024-09-02)
 
 ### Bug Fixes
