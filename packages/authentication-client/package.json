@@ -53,25 +53,25 @@
     "access": "public"
   },
   "dependencies": {
-    "@feathersjs/authentication": "^5.0.30",
-    "@feathersjs/commons": "^5.0.30",
-    "@feathersjs/errors": "^5.0.30",
-    "@feathersjs/feathers": "^5.0.30"
+    "@feathersjs/authentication": "^5.0.31",
+    "@feathersjs/commons": "^5.0.31",
+    "@feathersjs/errors": "^5.0.31",
+    "@feathersjs/feathers": "^5.0.31"
   },
   "devDependencies": {
-    "@feathersjs/authentication-local": "^5.0.30",
-    "@feathersjs/express": "^5.0.30",
-    "@feathersjs/memory": "^5.0.30",
-    "@feathersjs/rest-client": "^5.0.30",
-    "@feathersjs/socketio": "^5.0.30",
-    "@feathersjs/socketio-client": "^5.0.30",
-    "@types/mocha": "^10.0.7",
-    "@types/node": "^22.5.1",
-    "axios": "^1.7.7",
-    "mocha": "^10.7.3",
+    "@feathersjs/authentication-local": "^5.0.31",
+    "@feathersjs/express": "^5.0.31",
+    "@feathersjs/memory": "^5.0.31",
+    "@feathersjs/rest-client": "^5.0.31",
+    "@feathersjs/socketio": "^5.0.31",
+    "@feathersjs/socketio-client": "^5.0.31",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.1",
+    "axios": "^1.7.8",
+    "mocha": "^10.8.2",
     "shx": "^0.3.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "typescript": "^5.7.2"
   },
   "gitHead": "90caf635aec850550b9d37bea2762af959d9e8d5"
 }
