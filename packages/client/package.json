@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@babel/preset-env": "^7.29.2",
+    "@babel/preset-env": "^7.29.3",
     "@feathersjs/express": "^5.0.44",
     "@feathersjs/memory": "^5.0.44",
     "@feathersjs/socketio": "^5.0.44",
@@ -68,9 +68,9 @@
     "shx": "^0.4.0",
     "socket.io-client": "^4.8.3",
     "superagent": "^10.3.0",
-    "ts-loader": "^9.5.4",
-    "typescript": "^5.9.3",
-    "webpack": "^5.105.4",
+    "ts-loader": "^9.5.7",
+    "typescript": "^6.0.3",
+    "webpack": "^5.106.2",
     "webpack-cli": "^7.0.2",
     "webpack-merge": "^6.0.1"
   },
