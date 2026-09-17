@@ -103,8 +103,8 @@ export const ${camelName}QueryResolver = resolve<${upperName}Query, HookContext<
       ? `
   // If there is a user (e.g. with authentication), they are only allowed to see their own data
   ${type === 'mongodb' ? '_id' : 'id'}: async (value, user, context) => {
-    if (context.params.user) {
-      return context.params.user.${type === 'mongodb' ? '_id' : 'id'}
+    if (context.params.${camelName}) {
+      return context.params.${camelName}.${type === 'mongodb' ? '_id' : 'id'}
     }
 
     return value
