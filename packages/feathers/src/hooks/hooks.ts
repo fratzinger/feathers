@@ -17,7 +17,7 @@ export function functionHooks<F>(fn: F, managerOrMiddleware: HookOptions) {
   const wrapper: any = function (this: any, ...args: any[]) {
     const { Context, original } = wrapper
     // If we got passed an existing HookContext instance, we want to return it as well
-    const returnContext = args[args.length - 1] instanceof Context
+    const returnContext = args.at(-1) instanceof Context
     // Use existing context or default
     const base = returnContext ? (args.pop() as HookContext) : new Context()
     // Initialize the context
@@ -37,7 +37,7 @@ export function functionHooks<F>(fn: F, managerOrMiddleware: HookOptions) {
 
     // Runs the actual original method if `ctx.result` is not already set
     hookChain.push((ctx, next) => {
-      if (!Object.prototype.hasOwnProperty.call(context, 'result')) {
+      if (!Object.hasOwn(context, 'result')) {
         const returnValue = original.apply(this, ctx.arguments)
 
         if (returnValue[Symbol.asyncIterator]) {

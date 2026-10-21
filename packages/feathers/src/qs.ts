@@ -177,7 +177,7 @@ function setDeep(root: Record<string, any>, keys: string[], value: string): void
     // Empty bracket a[]=x — resolve to next sequential numeric index
     if (key === '') {
       let nextIndex = 0
-      while (Object.prototype.hasOwnProperty.call(node, String(nextIndex))) {
+      while (Object.hasOwn(node, String(nextIndex))) {
         nextIndex++
       }
       key = String(nextIndex)
@@ -189,12 +189,12 @@ function setDeep(root: Record<string, any>, keys: string[], value: string): void
     node = node[key]
   }
 
-  let last = keys[keys.length - 1]
+  let last = keys.at(-1)
 
   // Empty bracket a[]=x — resolve to next sequential numeric index
   if (last === '') {
     let nextIndex = 0
-    while (Object.prototype.hasOwnProperty.call(node, String(nextIndex))) {
+    while (Object.hasOwn(node, String(nextIndex))) {
       nextIndex++
     }
     last = String(nextIndex)

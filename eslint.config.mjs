@@ -10,9 +10,7 @@ export default config(
     rules: {
       // `[].concat(x)` and `[...x]` behave differently when `x` is not an array
       'e18e/prefer-spread-syntax': 'off',
-      // Feathers targets ES2020 (browsers, React Native)
-      'e18e/prefer-object-has-own': 'off',
-      'e18e/prefer-array-at': 'off',
+      // The ES2023 array copy methods are not confirmed to be available in Hermes (React Native)
       'e18e/prefer-array-to-sorted': 'off',
       'e18e/prefer-array-to-reversed': 'off'
     }

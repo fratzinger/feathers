@@ -154,7 +154,7 @@ describe('check-listener-leaks', () => {
     for (let i = 0; i < 10; i++) {
       e.on('default', () => {})
     }
-    assert.ok(!Object.prototype.hasOwnProperty.call(e._events!['default'] as any, 'warned'))
+    assert.ok(!Object.hasOwn(e._events!['default'] as any, 'warned'))
     e.on('default', () => {})
     assert.ok((e._events!['default'] as any).warned)
 
@@ -163,23 +163,23 @@ describe('check-listener-leaks', () => {
     for (let i = 0; i < 5; i++) {
       e.on('specific', () => {})
     }
-    assert.ok(!Object.prototype.hasOwnProperty.call(e._events!['specific'] as any, 'warned'))
+    assert.ok(!Object.hasOwn(e._events!['specific'] as any, 'warned'))
     e.on('specific', () => {})
     assert.ok((e._events!['specific'] as any).warned)
 
     // only one
     e.setMaxListeners(1)
     e.on('only one', () => {})
-    assert.ok(!Object.prototype.hasOwnProperty.call(e._events!['only one'] as any, 'warned'))
+    assert.ok(!Object.hasOwn(e._events!['only one'] as any, 'warned'))
     e.on('only one', () => {})
-    assert.ok(Object.prototype.hasOwnProperty.call(e._events!['only one'] as any, 'warned'))
+    assert.ok(Object.hasOwn(e._events!['only one'] as any, 'warned'))
 
     // unlimited
     e.setMaxListeners(0)
     for (let i = 0; i < 1000; i++) {
       e.on('unlimited', () => {})
     }
-    assert.ok(!Object.prototype.hasOwnProperty.call(e._events!['unlimited'] as any, 'warned'))
+    assert.ok(!Object.hasOwn(e._events!['unlimited'] as any, 'warned'))
 
     vi.restoreAllMocks()
   })
@@ -193,16 +193,16 @@ describe('check-listener-leaks', () => {
     for (let i = 0; i < 42; ++i) {
       e.on('fortytwo', () => {})
     }
-    assert.ok(!Object.prototype.hasOwnProperty.call(e._events!['fortytwo'] as any, 'warned'))
+    assert.ok(!Object.hasOwn(e._events!['fortytwo'] as any, 'warned'))
     e.on('fortytwo', () => {})
-    assert.ok(Object.prototype.hasOwnProperty.call(e._events!['fortytwo'] as any, 'warned'))
+    assert.ok(Object.hasOwn(e._events!['fortytwo'] as any, 'warned'))
     delete (e._events!['fortytwo'] as any).warned
 
     EventEmitter.defaultMaxListeners = 44
     e.on('fortytwo', () => {})
-    assert.ok(!Object.prototype.hasOwnProperty.call(e._events!['fortytwo'] as any, 'warned'))
+    assert.ok(!Object.hasOwn(e._events!['fortytwo'] as any, 'warned'))
     e.on('fortytwo', () => {})
-    assert.ok(Object.prototype.hasOwnProperty.call(e._events!['fortytwo'] as any, 'warned'))
+    assert.ok(Object.hasOwn(e._events!['fortytwo'] as any, 'warned'))
 
     vi.restoreAllMocks()
   })
@@ -214,9 +214,9 @@ describe('check-listener-leaks', () => {
     const e = new EventEmitter()
     e.setMaxListeners(1)
     e.on('uno', () => {})
-    assert.ok(!Object.prototype.hasOwnProperty.call(e._events!['uno'] as any, 'warned'))
+    assert.ok(!Object.hasOwn(e._events!['uno'] as any, 'warned'))
     e.on('uno', () => {})
-    assert.ok(Object.prototype.hasOwnProperty.call(e._events!['uno'] as any, 'warned'))
+    assert.ok(Object.hasOwn(e._events!['uno'] as any, 'warned'))
 
     // chainable
     assert.strictEqual(e, e.setMaxListeners(1))
@@ -413,7 +413,7 @@ describe('events-once', () => {
     const args = await EventEmitter.once(et as any, 'myevent')
     const value = args[0]
     assert.strictEqual(value, event)
-    assert.ok(!Object.prototype.hasOwnProperty.call(et.events, 'myevent'))
+    assert.ok(!Object.hasOwn(et.events, 'myevent'))
   })
 })
 
